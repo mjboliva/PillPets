@@ -8,14 +8,22 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var isFaqVisible = false
+    
     var body: some View {
         VStack {
             Image(systemName: "globe")
                 .imageScale(.large)
                 .foregroundColor(.accentColor)
             Text("Hello, world!")
+            Button("Open FAQ"){
+                isFaqVisible = true
+            }
         }
         .padding()
+        .sheet(isPresented: $isFaqVisible){
+            Faq()
+        }
     }
 }
 
