@@ -9,22 +9,39 @@ import SwiftUI
 
 struct ContentView: View {
     
+    @State private var backgroundColor = Color.green
     @State private var image1 = Image("chicken")
     var body: some View {
-        VStack (spacing: 0.5){
+        
+        ZStack {
             
-            image1
+            backgroundColor.scaledToFill()
+                .ignoresSafeArea()
+                .overlay(
+                    ColorPicker("", selection: $backgroundColor)
+                ).padding(.all)
             
-            Button(action: {
+            VStack (spacing: 0.5){
+                image1
+                Button(action: {
+                    image1 = Image("chickenHappy")
+                }) {
+                    Image("pillButton")
+                        .renderingMode(.original)
+                        .frame(height: 1.0)
+                        .foregroundColor(.accentColor)
+                }
                 
-                image1 = Image("chickenHappy")
-            }) {
-                Image("pillButton")
-                    .renderingMode(.original)
-                    
-            }
-            
-            
+        
+        }
+        
+
+           
+//            backgroundColor
+//                .ignoresSafeArea()
+//                .overlay(
+//                    ColorPicker("color", selection: $backgroundColor)
+//            )
 //
 //            Image("")
 //                .imageScale(.small)
@@ -40,6 +57,7 @@ struct ContentView: View {
 //                .foregroundColor(.accentColor)
 //            Text("ew!")
         }
+        .frame(height: 0.0)
     }
     
     struct ContentView_Previews: PreviewProvider {
