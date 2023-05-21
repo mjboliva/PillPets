@@ -14,7 +14,7 @@ struct MainView: View {
     //countdown
     @State var timeLeft: String = ""
     @State var count: Int = 0
-    let nextPillDate: Date = Calendar.current.date(byAdding: .day, value: 1, to: Date()) ?? Date()
+    let nextPillDate: Date = Calendar.current.date(byAdding: .minute, value: 1, to: Date()) ?? Date()
     
     func updateTimeLeft() {
         
@@ -35,7 +35,7 @@ struct MainView: View {
             }
         }
         
-    }
+    } 
     
     
     var body: some View {
@@ -46,7 +46,7 @@ struct MainView: View {
                 startRadius: 5,
                 endRadius: 500)
             .ignoresSafeArea()
-            VStack (spacing: 0.01){
+            VStack {
                 Text(timeLeft)
                     .font(.system(size: 150, weight: .semibold, design: .rounded))
                     .foregroundColor(.white)
@@ -56,10 +56,17 @@ struct MainView: View {
 
                 HStack {
                     Image("mjChick")
+                        .frame(width: 5.0, height: 5.0)
+                        .offset(x: -100, y: count == 1 ? 180 : 200)
                     Image("mjChick")
+                        .frame(width: 10.0, height: 10.0)
+                        .offset(y: count == 2 ? 180 : 200)
                     Image("mjChick")
-                    
+                        .offset(x: 100, y: count == 3 ? 180 : 200)
+                        .frame(width: 5.0, height: 5.0)
+                        .padding(/*@START_MENU_TOKEN@*/.all, 10.0/*@END_MENU_TOKEN@*/)
                 }
+                .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
             }
             .onReceive(medTimer, perform: {_ in
                 //this updates the timer
