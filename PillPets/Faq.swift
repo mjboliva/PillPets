@@ -10,8 +10,7 @@ import SwiftUI
 struct Faq: View {
     var body: some View {
         VStack{
-            Text("Question?")
-            Text("Answer")
+            FaqCard()
         }
     }
 }
