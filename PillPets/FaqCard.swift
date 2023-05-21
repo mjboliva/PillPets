@@ -10,10 +10,15 @@ import SwiftUI
 struct FaqCard: View {
     
     var body: some View {
+        
+        
         List{
+            
             // 1
             VStack{
                 Text("How do I swallow a pill?")
+                    .font(.system(size: 20, weight: .semibold, design: .rounded))
+                    .foregroundColor(.brown)
                 
                 HStack{
                     Image("neutralChicken")
@@ -22,11 +27,12 @@ struct FaqCard: View {
                         .offset(x: 20, y: 30)
                     
                     ZStack{
-                        Image("textBox")
-                            .resizable()
+                        Image("textBox")                             .resizable()
+                        
                         
                         Text("You can just swallow pills like your food! Just like drinking water after you take a bit of food, you can do the same with your pills! Drink some water to wash down the pill!")
-                            .font(.footnote)
+                            .font(.system(size: 15, design: .rounded))
+                            .foregroundColor(.black)
                             .padding(EdgeInsets(top: 5, leading: 5, bottom: 5, trailing: 5))
                             .foregroundColor(.black)
                             .frame(maxWidth: 200)
@@ -42,6 +48,9 @@ struct FaqCard: View {
             // 2
             VStack{
                 Text("What if I miss a day of taking my medication?")
+                    .font(.system(size: 20, weight: .semibold, design: .rounded))
+                    .foregroundColor(.brown)
+                    .padding()
                 
                 HStack{
                     Image("neutralChicken")
@@ -54,7 +63,8 @@ struct FaqCard: View {
                             .resizable()
                         
                         Text("No one is perfect, and it’s normal to miss a day of taking medication. If you do, remember to not double up on pills and take your next dose at the next time that you need to. We promise your PillPets will forgive you!")
-                            .font(.footnote)
+                            .font(.system(size: 14, design: .rounded))
+                            .foregroundColor(.black)
                             .padding(EdgeInsets(top: 5, leading: 5, bottom: 5, trailing: 5))
                             .foregroundColor(.black)
                             .frame(maxWidth: 200)
@@ -70,6 +80,9 @@ struct FaqCard: View {
             // 3
             VStack{
                 Text("Why do I need to take medicine when some other people don’t?")
+                    .font(.system(size: 20, weight: .semibold, design: .rounded))
+                    .foregroundColor(.brown)
+                    .padding()
                 
                 HStack{
                     Image("neutralChicken")
@@ -82,7 +95,8 @@ struct FaqCard: View {
                             .resizable()
                         
                         Text("People take medication for many different reasons. Every person is unique and everyone needs different things to be the happiest they can be in life. Some people need medicine!")
-                            .font(.footnote)
+                            .font(.system(size: 15, design: .rounded))
+                            .foregroundColor(.black)
                             .padding(EdgeInsets(top: 5, leading: 5, bottom: 5, trailing: 5))
                             .foregroundColor(.black)
                             .frame(maxWidth: 200)
@@ -99,6 +113,10 @@ struct FaqCard: View {
             // 4
             VStack{
                 Text("Can I share my medicine with others?")
+                    .font(.system(size: 20, weight: .semibold, design: .rounded))
+                    .foregroundColor(.brown)
+                    .padding()
+                
                 
                 HStack{
                     Image("neutralChicken")
@@ -111,7 +129,8 @@ struct FaqCard: View {
                             .resizable()
                         
                         Text("Your medicine was given to you by your doctor for you only. Only take medicine from your doctor, guardian, or an adult you trust.")
-                            .font(.footnote)
+                            .font(.system(size: 15, design: .rounded))
+                            .foregroundColor(.black)
                             .padding(EdgeInsets(top: 5, leading: 5, bottom: 5, trailing: 5))
                             .foregroundColor(.black)
                             .frame(maxWidth: 200)
@@ -126,6 +145,7 @@ struct FaqCard: View {
         }
         .listStyle(.plain)
     }
+    
 }
 
 struct FaqCard_Previews: PreviewProvider {

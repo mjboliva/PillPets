@@ -102,13 +102,13 @@ struct MainView: View {
                     HStack {
                         Image("egg")
                             .frame(width: 5.0, height: 5.0)
-                            .offset(x: 55, y: count == 1 ? 160 : 180)
+                            .offset(x: 55, y: count == 1 ? 80 : 100)
                         Image("crackEgg")
                             .frame(width: 5.0, height: 5.0)
-                            .offset(x: 75, y: count == 2 ? 160 : 180)
+                            .offset(x: 75, y: count == 2 ? 80 : 100)
                         Image("openEgg")
                             .frame(width: 5.0, height: 5.0)
-                            .offset(x: 75, y: count == 3 ? 160 : 180)
+                            .offset(x: 75, y: count == 3 ? 80 : 100)
                             .padding(.all)
                         }
                         .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)

@@ -8,6 +8,7 @@
 import SwiftUI
 
 @main
+
 struct PillPetsApp: App {
     var body: some Scene {
         WindowGroup {
