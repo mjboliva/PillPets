@@ -10,6 +10,7 @@ import SwiftUI
 struct MainView: View {
     //image variables for chicken
     @State private var chicken = Image("neutralChicken")
+    @State private var sadChicken = Image("sadChicken")
     @State private var timerDone = false
     @State var count: Int = 0 //for loading animation
     @State var happyCount: Int = 3 //for happy animation
@@ -62,15 +63,13 @@ struct MainView: View {
 
             VStack {
                 
-                chicken
                 
                 if (timerDone == true) {
+                    sadChicken
                     Button(action: {
                         chicken = Image("happyChicken")
                         timerDone = false
                         countDown = 10
-                        
-                        
                         
                     }) {
                         Image("pillButton")
@@ -87,6 +86,7 @@ struct MainView: View {
                     })
                 }
                 if (countDown > 0) {
+                    chicken
                     Text("\(countDown)")
                         .font(.system(size: 60, weight: .semibold, design: .rounded))
                         .foregroundColor(.white)
