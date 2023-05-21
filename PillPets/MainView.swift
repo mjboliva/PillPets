@@ -46,7 +46,7 @@ struct MainView: View {
                 HStack{
                     Button(action: {isFaqVisible = true}){
                         Image("faqButton")
-                    }//.offset(x: -120, y: -80)
+                    }.offset(x: 60, y: -80)
                     
                     Button(action: { UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) {success, error in
                             if success {
@@ -57,10 +57,12 @@ struct MainView: View {
                         }
                     }) {
                         Image("defaultPillButton")
-                    }
+                    }.offset(x: 5, y: -80)
                     
-                    Button("Send Notif"){
-                    }
+                    Button(action: {sendNotification()}) {
+                        Image("defaultPillButton")
+                        
+                    }.offset(x: -60, y: -80)
                 }
         
                 
