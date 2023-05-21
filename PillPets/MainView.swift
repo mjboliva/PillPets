@@ -15,6 +15,8 @@ struct MainView: View {
     @State var count: Int = 0 //for loading animation
     @State var happyCount: Int = 3 //for happy animation
     
+    @State var isFaqVisible = false
+    
     //creates a timer that updates every second
     let medTimer = Timer.publish(every: 1, tolerance: 0.5, on: .main, in: .common).autoconnect()
     @State private var countDown = 10 // for demo purposes we will have the pill being taken every 60 seconds
@@ -63,6 +65,9 @@ struct MainView: View {
 
             VStack {
                 
+                Button("Open FAQ"){
+                    isFaqVisible = true
+                }
                 
                 if (timerDone == true) {
                     sadChicken
@@ -112,6 +117,9 @@ struct MainView: View {
                 
                 }
             }
+                .sheet(isPresented: $isFaqVisible){
+                        Faq()
+                }
                 .onReceive(medTimer, perform: {_ in
                     //updateTimeLeft() //this updates the timer
                     
@@ -132,12 +140,13 @@ struct MainView: View {
                 })
             }
         }
-        struct MainView_Previews: PreviewProvider {
-            static var previews: some View {
-                MainView()
-            }
-        }
     }
+
+struct MainView_Previews: PreviewProvider {
+    static var previews: some View {
+        MainView()
+    }
+}
                 
           
             
@@ -209,4 +218,3 @@ struct MainView: View {
         //    }
         //}
 //    }
-
