@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import UserNotifications
 
 struct MainView: View {
     //image variables for chicken
@@ -21,36 +22,6 @@ struct MainView: View {
     let medTimer = Timer.publish(every: 1, tolerance: 0.5, on: .main, in: .common).autoconnect()
     @State private var countDown = 10 // for demo purposes we will have the pill being taken every 60 seconds
 
-    //loading animation
-    //@State var timeLeft: String = ""
-
-    
-    
-    //let nextPillDate: Date = Calendar.current.date(byAdding: .minute, value: 1, to: Date()) ?? Date()
-
-
-    //function for updating time
-//    func updateTimeLeft() {
-//
-//        //this updates the time
-//        let remaining = Calendar.current.dateComponents([.hour, .minute, .second], from: Date(), to: nextPillDate)
-//        let hoursLeft = remaining.hour ?? 0
-//        let minLeft = remaining.minute ?? 0
-//        let secLeft = remaining.second ?? 0
-//
-//        //this updates the display time string
-//        if (hoursLeft > 1) {
-//            timeLeft = "\(hoursLeft) hours, \(minLeft) minutes, and \(secLeft) seconds left"
-//        }else {
-//            if (minLeft > 1) {
-//                timeLeft = "\(minLeft) minutes, and \(secLeft) seconds left"
-//            }else {
-//                timeLeft = "\(secLeft) seconds left"
-//            }
-//        }
-//
-//
-//    }
     
     
     //The actual view
@@ -65,17 +36,47 @@ struct MainView: View {
 
             VStack {
                 
+//                Button(action: {
+//                    UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) {success, error in
+//                        if success {
+//                            print("All good")
+//                        }else if let error = error {
+//                            print (error.localizedDescription)
+//                        }
+//                    }
+//                }) {
+//                    Image("defaultPillButton")
+//                }
+//
+//                Button(action: {
+//                    let notif = UNMutableNotificationContent()
+//                    notif.title = "Take your medicine!"
+//                    notif.subtitle = "Your pet is sad"
+//
+//                    let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 11, repeats: false)
+//
+//                    let request = UNNotificationRequest(identifier: UUID().uuidString, content: notif, trigger: trigger)
+//
+//                    UNUserNotificationCenter.current().add(request)
+//                }) {
+//                    Image("defaultPillButton")
+//                }
+                
                 Button(action: {isFaqVisible = true}){
                     Image("faqButton")
-                }
-                
+                }//.offset(x: -120, y: -80)
+        
                 
                 if (timerDone == true) {
+                    
+    
+                    
                     sadChicken
                     Button(action: {
                         chicken = Image("happyChicken")
                         timerDone = false
                         countDown = 10
+                        
                         
                     }) {
                         Image("pillButton")
@@ -149,73 +150,3 @@ struct MainView: View {
     }
                 
           
-            
-//            VStack (spacing: 0.5){
-//                chicken
-//                Button(action: {
-//                    chicken = Image("chickenHappy")
-//                }) {
-//                    Image("pillButton")
-//                        .renderingMode(.original)
-//                        .frame(height: 1.0)
-//                        .foregroundColor(.accentColor)
-//                }
-//            }
-//
-//
-//            struct MainView_Previews: PreviewProvider {
-//                static var previews: some View {
-//                    MainView()
-//                }
-//            }
-//        }
-//
-//
-//
-//
-        
-        //
-        //            VStack (spacing: 0.5){
-        //                chicken
-        //                Button(action: {
-        //                    chicken = Image("chickenHappy")
-        //                }) {
-        //                    Image("pillButton")
-        //                        .renderingMode(.original)
-        //                        .frame(height: 1.0)
-        //                        .foregroundColor(.accentColor)
-        //                }
-        //
-        //
-        //
-        
-        
-        //ZStack {
-        //
-        //            backgroundColor.scaledToFill()
-        //                .ignoresSafeArea()
-        //                .overlay(
-        //                    ColorPicker("", selection: $backgroundColor)
-        //                ).padding(.all)
-        //
-        //            VStack (spacing: 0.5){
-        //                image1
-        //                Button(action: {
-        //                    image1 = Image("chickenHappy")
-        //                }) {
-        //                    Image("pillButton")
-        //                        .renderingMode(.original)
-        //                        .frame(height: 1.0)
-        //                        .foregroundColor(.accentColor)
-        //                }
-        //
-        //
-        //        }
-        
-        //struct Previews_MainView_Previews: PreviewProvider {
-        //    static var previews: some View {
-        //        /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
-        //    }
-        //}
-//    }
-
