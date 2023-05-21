@@ -15,6 +15,8 @@ struct MainView: View {
     @State var count: Int = 0 //for loading animation
     @State var happyCount: Int = 3 //for happy animation
     
+    @State var isFaqVisible = false
+    
     //creates a timer that updates every second
     let medTimer = Timer.publish(every: 1, tolerance: 0.5, on: .main, in: .common).autoconnect()
     @State private var countDown = 10 // for demo purposes we will have the pill being taken every 60 seconds
@@ -62,6 +64,10 @@ struct MainView: View {
             .ignoresSafeArea()
 
             VStack {
+                
+                Button("Open FAQ"){
+                    isFaqVisible = true
+                }
                 
                 
                 if (timerDone == true) {
@@ -112,6 +118,9 @@ struct MainView: View {
                 
                 }
             }
+                .sheet(isPresented: $isFaqVisible){
+                    Faq()
+                }
                 .onReceive(medTimer, perform: {_ in
                     //updateTimeLeft() //this updates the timer
                     
