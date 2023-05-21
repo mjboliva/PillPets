@@ -65,8 +65,8 @@ struct MainView: View {
 
             VStack {
                 
-                Button("Open FAQ"){
-                    isFaqVisible = true
+                Button(action: {isFaqVisible = true}){
+                    Image("faqButton")
                 }
                 
                 
