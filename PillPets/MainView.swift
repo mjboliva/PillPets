@@ -9,6 +9,13 @@ import SwiftUI
 import UserNotifications
 
 struct MainView: View {
+    
+//    func checkForPerm(){
+//        let notificationCenter = UNUserNotificationCenter.current()
+//        notificationCenter.getNotificationSettings(settings)
+//    }
+    
+    
     //image variables for chicken
     @State private var chicken = Image("neutralChicken")
     @State private var sadChicken = Image("sadChicken")
@@ -36,35 +43,25 @@ struct MainView: View {
 
             VStack {
                 
-//                Button(action: {
-//                    UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) {success, error in
-//                        if success {
-//                            print("All good")
-//                        }else if let error = error {
-//                            print (error.localizedDescription)
-//                        }
-//                    }
-//                }) {
-//                    Image("defaultPillButton")
-//                }
-//
-//                Button(action: {
-//                    let notif = UNMutableNotificationContent()
-//                    notif.title = "Take your medicine!"
-//                    notif.subtitle = "Your pet is sad"
-//
-//                    let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 11, repeats: false)
-//
-//                    let request = UNNotificationRequest(identifier: UUID().uuidString, content: notif, trigger: trigger)
-//
-//                    UNUserNotificationCenter.current().add(request)
-//                }) {
-//                    Image("defaultPillButton")
-//                }
-                
-                Button(action: {isFaqVisible = true}){
-                    Image("faqButton")
-                }//.offset(x: -120, y: -80)
+                HStack{
+                    Button(action: {isFaqVisible = true}){
+                        Image("faqButton")
+                    }//.offset(x: -120, y: -80)
+                    
+                    Button(action: { UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) {success, error in
+                            if success {
+                                print("All good")
+                            }else if let error = error {
+                                print (error.localizedDescription)
+                            }
+                        }
+                    }) {
+                        Image("defaultPillButton")
+                    }
+                    
+                    Button("Send Notif"){
+                    }
+                }
         
                 
                 if (timerDone == true) {
@@ -142,11 +139,26 @@ struct MainView: View {
                 })
             }
         }
-        struct MainView_Previews: PreviewProvider {
-            static var previews: some View {
-                MainView()
-            }
-        }
     }
-                
-          
+
+func sendNotification(){
+    let id = "Hungry-Pet"
+    
+    let notif = UNMutableNotificationContent()
+    notif.title = "Take your medicine!"
+    notif.body = "Your pet is sad. It's time to Feed it!"
+    notif.sound = .default
+    
+    let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
+    
+    let request = UNNotificationRequest(identifier: id, content: notif, trigger: trigger)
+    
+    UNUserNotificationCenter.current().add(request)
+}
+
+
+struct MainView_Previews: PreviewProvider {
+    static var previews: some View {
+        MainView()
+    }
+}
