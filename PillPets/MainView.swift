@@ -19,10 +19,12 @@ struct MainView: View {
     let medTimer = Timer.publish(every: 1, tolerance: 0.5, on: .main, in: .common).autoconnect()
     @State private var countDown = 10 // for demo purposes we will have the pill being taken every 60 seconds
 
-//loading animation
-//@State var timeLeft: String = ""
+    //loading animation
+    //@State var timeLeft: String = ""
+
     
-//let nextPillDate: Date = Calendar.current.date(byAdding: .minute, value: 1, to: Date()) ?? Date()
+    
+    //let nextPillDate: Date = Calendar.current.date(byAdding: .minute, value: 1, to: Date()) ?? Date()
 
 
     //function for updating time
@@ -136,4 +138,75 @@ struct MainView: View {
             }
         }
     }
-   
+                
+          
+            
+//            VStack (spacing: 0.5){
+//                chicken
+//                Button(action: {
+//                    chicken = Image("chickenHappy")
+//                }) {
+//                    Image("pillButton")
+//                        .renderingMode(.original)
+//                        .frame(height: 1.0)
+//                        .foregroundColor(.accentColor)
+//                }
+//            }
+//
+//
+//            struct MainView_Previews: PreviewProvider {
+//                static var previews: some View {
+//                    MainView()
+//                }
+//            }
+//        }
+//
+//
+//
+//
+        
+        //
+        //            VStack (spacing: 0.5){
+        //                chicken
+        //                Button(action: {
+        //                    chicken = Image("chickenHappy")
+        //                }) {
+        //                    Image("pillButton")
+        //                        .renderingMode(.original)
+        //                        .frame(height: 1.0)
+        //                        .foregroundColor(.accentColor)
+        //                }
+        //
+        //
+        //
+        
+        
+        //ZStack {
+        //
+        //            backgroundColor.scaledToFill()
+        //                .ignoresSafeArea()
+        //                .overlay(
+        //                    ColorPicker("", selection: $backgroundColor)
+        //                ).padding(.all)
+        //
+        //            VStack (spacing: 0.5){
+        //                image1
+        //                Button(action: {
+        //                    image1 = Image("chickenHappy")
+        //                }) {
+        //                    Image("pillButton")
+        //                        .renderingMode(.original)
+        //                        .frame(height: 1.0)
+        //                        .foregroundColor(.accentColor)
+        //                }
+        //
+        //
+        //        }
+        
+        //struct Previews_MainView_Previews: PreviewProvider {
+        //    static var previews: some View {
+        //        /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
+        //    }
+        //}
+//    }
+

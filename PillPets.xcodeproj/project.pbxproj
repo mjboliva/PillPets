@@ -8,19 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		2DC5CDAF2A1956960009A13B /* PillPetsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC5CDAE2A1956960009A13B /* PillPetsApp.swift */; };
+		2DC5CDB12A1956960009A13B /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC5CDB02A1956960009A13B /* MainView.swift */; };
 		2DC5CDB32A1956970009A13B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DC5CDB22A1956970009A13B /* Assets.xcassets */; };
 		2DC5CDB62A1956970009A13B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DC5CDB52A1956970009A13B /* Preview Assets.xcassets */; };
-		AF3EF2D52A1993EF00CB78A1 /* Faq.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3EF2D42A1993EF00CB78A1 /* Faq.swift */; };
-		AF57E7282A19D0AB003F428A /* FaqCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF57E7272A19D0AB003F428A /* FaqCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2DC5CDAB2A1956960009A13B /* PillPets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PillPets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DC5CDAE2A1956960009A13B /* PillPetsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillPetsApp.swift; sourceTree = "<group>"; };
+		2DC5CDB02A1956960009A13B /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		2DC5CDB22A1956970009A13B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2DC5CDB52A1956970009A13B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		AF3EF2D42A1993EF00CB78A1 /* Faq.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Faq.swift; sourceTree = "<group>"; };
-		AF57E7272A19D0AB003F428A /* FaqCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaqCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,10 +52,9 @@
 			isa = PBXGroup;
 			children = (
 				2DC5CDAE2A1956960009A13B /* PillPetsApp.swift */,
+				2DC5CDB02A1956960009A13B /* MainView.swift */,
 				2DC5CDB22A1956970009A13B /* Assets.xcassets */,
 				2DC5CDB42A1956970009A13B /* Preview Content */,
-				AF3EF2D42A1993EF00CB78A1 /* Faq.swift */,
-				AF57E7272A19D0AB003F428A /* FaqCard.swift */,
 			);
 			path = PillPets;
 			sourceTree = "<group>";
@@ -140,9 +137,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF3EF2D52A1993EF00CB78A1 /* Faq.swift in Sources */,
-				AF57E7282A19D0AB003F428A /* FaqCard.swift in Sources */,
-
+				2DC5CDB12A1956960009A13B /* MainView.swift in Sources */,
 				2DC5CDAF2A1956960009A13B /* PillPetsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -200,10 +195,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				ONLY_ACTIVE_ARCH = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -254,10 +249,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -273,7 +267,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PillPets/Preview Content\"";
-				DEVELOPMENT_TEAM = D9JAJVCS3Y;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -281,7 +274,6 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -291,7 +283,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -303,7 +295,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PillPets/Preview Content\"";
-				DEVELOPMENT_TEAM = D9JAJVCS3Y;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -311,7 +302,6 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -321,7 +311,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
