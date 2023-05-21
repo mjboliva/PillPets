@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2DC5CDAF2A1956960009A13B /* PillPetsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC5CDAE2A1956960009A13B /* PillPetsApp.swift */; };
-		2DC5CDB12A1956960009A13B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC5CDB02A1956960009A13B /* ContentView.swift */; };
+		2DC5CDB12A1956960009A13B /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC5CDB02A1956960009A13B /* MainView.swift */; };
 		2DC5CDB32A1956970009A13B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DC5CDB22A1956970009A13B /* Assets.xcassets */; };
 		2DC5CDB62A1956970009A13B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DC5CDB52A1956970009A13B /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -16,7 +16,7 @@
 /* Begin PBXFileReference section */
 		2DC5CDAB2A1956960009A13B /* PillPets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PillPets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DC5CDAE2A1956960009A13B /* PillPetsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillPetsApp.swift; sourceTree = "<group>"; };
-		2DC5CDB02A1956960009A13B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2DC5CDB02A1956960009A13B /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		2DC5CDB22A1956970009A13B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2DC5CDB52A1956970009A13B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -52,7 +52,7 @@
 			isa = PBXGroup;
 			children = (
 				2DC5CDAE2A1956960009A13B /* PillPetsApp.swift */,
-				2DC5CDB02A1956960009A13B /* ContentView.swift */,
+				2DC5CDB02A1956960009A13B /* MainView.swift */,
 				2DC5CDB22A1956970009A13B /* Assets.xcassets */,
 				2DC5CDB42A1956970009A13B /* Preview Content */,
 			);
@@ -137,7 +137,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DC5CDB12A1956960009A13B /* ContentView.swift in Sources */,
+				2DC5CDB12A1956960009A13B /* MainView.swift in Sources */,
 				2DC5CDAF2A1956960009A13B /* PillPetsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
